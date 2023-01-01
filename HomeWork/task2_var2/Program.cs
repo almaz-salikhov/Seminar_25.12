@@ -2,11 +2,13 @@
 // Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N. 
 // Выполнить с помощью рекурсии.
 
+// сначала выясняю, какое число больше
+// после этого завожу в функцию SumOfNumbersfromNtoM
+// чтобы не разветвлять ее внутри
+
 int SumOfNumbersfromNtoM(int max, int min)
 {
-    {
-        return (max == min ? max : max + SumOfNumbersfromNtoM(max - 1, min));
-    }
+    return (max == min ? max : max + SumOfNumbersfromNtoM(max - 1, min));
 }
 
 Console.Write("Введите число N: ");
@@ -20,11 +22,7 @@ if (N < 0 || M < 0)
 }
 else
 {
-    // сначала выясняю, какое число больше
-    // после этого завожу в функцию SumOfNumbersfromNtoM
-    // чтобы не разветвлять ее внутри
-    int max = N;
-    int min = M;
+    int max = N; int min = M;
     if (N < M)
     {
         max = M;
@@ -32,5 +30,3 @@ else
     }
     Console.WriteLine((M == N) ? "Числа совпадают" : SumOfNumbersfromNtoM(max, min));
 }
-
-
