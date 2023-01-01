@@ -2,18 +2,23 @@
 // Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. 
 // Выполнить с помощью рекурсии.
 
+// string NumbersFromNto1(int N)
+// {
+//     if (N == 1)
+//     {
+//         // Console.WriteLine("YES: " + N);
+//         return "1";
+//     }
+//     else
+//     {
+//         // Console.WriteLine("NO: " + N);
+//         return (N + ", ") + NumbersFromNto1(N - 1);
+//     }
+// }
+
 string NumbersFromNto1(int N)
 {
-    if (N == 1)
-    {
-        // Console.WriteLine("YES: " + N);
-        return "1";
-    }
-    else
-    {
-        // Console.WriteLine("NO: " + N);
-        return (N + ", ") + NumbersFromNto1(N - 1);
-    }
+    return (N == 1 ? "1" : (N + ", ") + NumbersFromNto1(N - 1));
 }
 
 Console.Write("Введите число N: ");
