@@ -23,5 +23,11 @@ string NumbersFromNto1(int N)
 
 Console.Write("Введите число N: ");
 int num = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Натуральные числа от " + (num) + " до 1: " + (NumbersFromNto1(num)));
+if (num > 0)
+{
+    Console.WriteLine("Натуральные числа от " + (num) + " до 1: " + (NumbersFromNto1(num)));
+}
+else
+{
+    Console.WriteLine("Введенное число не является натуральным");
+}
